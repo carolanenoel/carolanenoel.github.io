@@ -5,16 +5,11 @@ const { Description } = Astro.props
 // voir pour ajouter tags
 ---
 
-<article class="flex flex-col gap-5 px-5 pb-5 rounded-lg">
+    <article class="flex flex-col items-start w-full gap-5 pb-5 rounded-lg">
 
-    <img class="w-full" src={ProjectIllu} alt={Title}>
-    <h3 class="card-title">{Title}</h3>
-    <p>{Description}</p>
+        <img class="rounded-lg" src={ProjectIllu} alt={Title}>
+        <h3 class="font-cormorantInfant text-start">{Title}</h3>
+        <p class="text-start">{Description}</p>
+    
+    </article>
 
-</article>
-
-<style>
-    .card-title {
-        font-family: 'Palanquin', sans-serif;
-    }
-</style>

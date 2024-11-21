@@ -1,7 +1,7 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+title: 'The Beaver & his Pancakes'
+description: 'Un design déjanté né d’un rêve où les pixels dansent la salsa. Une explosion de couleurs et de formes qui promet une expérience visuelle aussi surprenante qu’un chat en costume de super-héros. Pour les amateurs d’inattendu !'
+pubDate: '21 Novembre 2024'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 

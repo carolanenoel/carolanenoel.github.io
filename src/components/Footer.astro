@@ -4,9 +4,9 @@ const today = new Date();
 
 <footer class="flex flex-col items-start gap-5">
 	<div class="w-full px-5">
-		<section class="section-contact flex flex-col items-start w-full gap-2.5 rounded-2xl px-8 py-9">
-			<p class="text-white">On se contacte ?</p>
-			<a class="text-base text-white" href="mailto:carolane.noel@outlook.com">carolane.noel@outlook.com</a>
+		<section class="flex flex-col items-start w-full gap-2.5 rounded-2xl px-8 py-9 bg-secondaryNeutral">
+			<p class="text-clrWhite">On se contacte ?</p>
+			<a class="text-base text-clrWhite" href="mailto:carolane.noel@outlook.com">carolane.noel@outlook.com</a>
 			<ul class="flex gap-8">
 				<li><img src="logo_behance.svg" alt="Logo Behance"></li>
 				<li><img src="logo_linkedin.svg" alt="Logo LinkedIn"></li>
@@ -17,7 +17,7 @@ const today = new Date();
 	
 	<section class="relative">
 		<img src="/footer-illu.png" alt="Illustration footer">
-		<div class="absolute w-full bottom-2 text-base text-center text-white">
+		<div class="absolute w-full bottom-2 text-base text-center text-clrWhite">
 			&copy; {today.getFullYear()} Carolane. Tous droits réservés.
 		</div>
 	</section>
@@ -49,9 +49,6 @@ const today = new Date();
 		width: 2em;
 		background-color: var(--primary-neutral);
 		border-radius: 4px;
-	}
-
-	.section-contact {
-		background-color: var(--secondary-neutral);
+		cursor: pointer;
 	}
 </style>
