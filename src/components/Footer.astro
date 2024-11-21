@@ -1,0 +1,57 @@
+---
+const today = new Date();
+---
+
+<footer class="flex flex-col items-start gap-5">
+	<div class="w-full px-5">
+		<section class="section-contact flex flex-col items-start w-full gap-2.5 rounded-2xl px-8 py-9">
+			<p class="text-white">On se contacte ?</p>
+			<a class="text-base text-white" href="mailto:carolane.noel@outlook.com">carolane.noel@outlook.com</a>
+			<ul class="flex gap-8">
+				<li><img src="logo_behance.svg" alt="Logo Behance"></li>
+				<li><img src="logo_linkedin.svg" alt="Logo LinkedIn"></li>
+				<li><img src="logo_instagram.svg" alt="Logo Instagram"></li>
+			</ul>
+		</section>
+	</div>
+	
+	<section class="relative">
+		<img src="/footer-illu.png" alt="Illustration footer">
+		<div class="absolute w-full bottom-2 text-base text-center text-white">
+			&copy; {today.getFullYear()} Carolane. Tous droits réservés.
+		</div>
+	</section>
+	
+</footer>
+<style>
+	footer {
+		
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		
+	}
+	.social-links a:hover {
+		
+	}
+
+	li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 0.4em;
+		height: 2em;
+		width: 2em;
+		background-color: var(--primary-neutral);
+		border-radius: 4px;
+	}
+
+	.section-contact {
+		background-color: var(--secondary-neutral);
+	}
+</style>

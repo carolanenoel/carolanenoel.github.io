@@ -1,0 +1,21 @@
+---
+const { Link } = Astro.props
+const { Icon } = Astro.props
+---
+
+<button class="round-button flex justify-center items-center w-12 h-12 rounded-full">
+    <img src={Icon} alt="">
+</button>
+
+
+<style>
+    .round-button {
+        background-color: var(--primary-neutral);
+    }
+    .round-button:hover {
+        background-color: var(--primary-dark);
+    }
+    .round-button:focus {
+        background-color: var(--primary-light);
+    }
+</style>

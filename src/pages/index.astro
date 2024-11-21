@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SkillCardCarousel from '../components/SkillCardsCarousel.astro';
+import ProjectCardsCarousel from '../components/ProjectCardsCarousel.astro';
+import Button from '../components/Button.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="font-palanquin">
+		<Header />
+		<main class="flex flex-col px-5 lg:px-16 gap-20">
+			<section class="flex flex-col items-center gap-11">
+				<div class="text-center">
+					<h1 class="lg:text-4xl">Du rêve à la réalisation</h1>
+					<p class="text-lg">Design graphique et illustrations</p>
+				</div>
+				<div class="flex flex-col items-center gap-2.5">
+					<img src="/logo-icon-primary.svg" alt="Logo">
+					<img src="/star-icon.svg" alt="Étoile">
+				</div>
+			</section>
+
+			<section class="flex flex-col items-center w-full gap-2">
+				<h2>Services</h2>
+				<SkillCardCarousel />
+			</section>
+
+			<section class="flex flex-col items-center gap-2">
+				<h2>Projets</h2>
+				<ProjectCardsCarousel />
+				<Button Link="/blog" Placeholder="Voir plus ┏ (゜ω゜)=👉"></Button>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

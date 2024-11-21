@@ -1,0 +1,129 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class="flex w-full">
+	<nav class="relative flex w-full lg:px-16 justify-between items-center">
+		<a href="/">
+			<img src="/logo-icon.svg" alt="Logo" class="w-16">
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger">
+				<img src="/menu-icon.svg" alt="">
+			</button>
+		</div>
+		<ul class="internal-links hidden lg:flex lg:mx-auto lg:flex lg:items- lg:justify-end lg:w-full">
+			<li><HeaderLink href="/">Home</HeaderLink></li>
+			<li><HeaderLink href="/blog">Projets</HeaderLink></li>
+			<li><HeaderLink href="/about">About</HeaderLink></li>
+		</ul>
+	</nav>
+	<div class="navbar-menu relative z-50 px-5 hidden">
+		<div class="navbar-backdrop fixed inset-0"></div>
+		<nav class="fixed inset-0 flex flex-col bg-white">
+			<div class="flex w-full justify-between px-5">
+				<a href="/">
+					<img src="/logo-icon.svg" alt="Logo" class="w-16">
+				</a>
+				<button class="navbar-close">
+					<img src="/close-icon.svg" alt="">
+				</button>
+			</div>
+			<div class="internal-links flex flex-col w-full items-start text-3xl">
+				<HeaderLink href="/">Home</HeaderLink>
+				<HeaderLink href="/blog">Projets</HeaderLink>
+				<HeaderLink href="/about">About</HeaderLink>
+			</div>
+		</nav>
+	</div>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1.25em;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		color: var(--primary-neutral);
+	}
+	nav a:hover {
+		color: var(--primary-dark);
+	}
+	nav a:focus {
+		color: var(--primary-light);
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+	.internal-links {
+		font-family: 'Cormorant Infant', serif;
+	}
+</style>
+
+<script>
+	// Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+</script>

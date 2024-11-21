@@ -1,0 +1,20 @@
+---
+const { SkillIllu } = Astro.props
+const { SkillType } = Astro.props
+---
+
+<article class="skill-card flex flex-col gap-5 p-5 rounded-lg hover:rotate-6 hover:scale-110">
+
+    <img class="max-w-40" src={SkillIllu} alt={SkillType}>
+    <h3>{SkillType}</h3>
+
+</article>
+
+<style>
+    .skill-card {
+        background-color: var(--gray-light);
+    }
+    .skill-card:hover {
+        border : solid 3px var(--primary-neutral);
+    }
+</style>
