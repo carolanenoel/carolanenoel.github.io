@@ -3,6 +3,8 @@ title: 'Markdown Style Guide'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jun 19 2024'
 heroImage: '/blog-placeholder-1.jpg'
+client: 'Fantaisie Créative@2024'
+brief: 'Créer un design vibrant et décalé, mêlant couleurs vives et formes ludiques pour surprendre le spectateur. S’adressant aux amateurs de créativité audacieuse, le projet vise à casser les conventions visuelles avec une identité complète incluant logos et illustrations, dans un style fun et inattendu.'
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
