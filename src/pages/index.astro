@@ -16,28 +16,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body class="font-palanquin">
 		<Header />
-		<main class="flex flex-col px-5 lg:px-16 gap-20">
-			<section class="flex flex-col items-center gap-11">
-				<div class="text-center">
-					<h1 class="font-cormorantInfant lg:text-4xl">Du rêve à la réalisation</h1>
-					<p class="text-lg">Design graphique et illustrations</p>
-				</div>
-				<div class="flex flex-col items-center gap-2.5">
-					<img src="/logo-icon-primary.svg" alt="Logo">
-					<img src="/star-icon.svg" alt="Étoile">
-				</div>
+		<main class="flex flex-col gap-40 lg:gap-96">
+
+			<section class="relative z-0 flex flex-col w-full">
+
+				<section class="flex flex-col items-center gap-11 px-5 lg:px-16">
+					<div class="text-center">
+						<h1 class="font-cormorantInfant lg:text-4xl">Du rêve à la réalisation</h1>
+						<p class="text-lg">Design graphique et illustrations</p>
+					</div>
+					<div class="flex flex-col items-center gap-2.5">
+						<img src="/logo-icon-primary.svg" alt="Logo">
+						<img src="/star-icon.svg" alt="Étoile">
+					</div>
+				</section>
+	
+				<img class="absolute top-52 lg:top-0 w-full" src="/livreillu.png" alt="">
+
 			</section>
 
-			<section class="flex flex-col items-center w-full gap-2">
-				<h2 class="font-cormorantInfant">Services</h2>
-				<SkillCardCarousel />
+			<section class="relative z-50 flex flex-col gap-20 py-8 rounded-3xl bg-white">
+
+				<section class="flex flex-col items-center w-full gap-5 lg:gap-7 px-5 lg:px-16">
+					<h2 class="font-cormorantInfant lg:text-3xl">Services</h2>
+					<SkillCardCarousel />
+				</section>
+	
+				<section class="flex flex-col items-center gap-5 lg:gap-7 px-5 lg:px-16">
+					<h2 class="font-cormorantInfant lg:text-3xl">Projets</h2>
+					<ProjectCardsCarousel />
+					<Button Link="/blog" Placeholder="Voir plus ┏ (゜ω゜)=👉"></Button>
+				</section>
+
 			</section>
 
-			<section class="flex flex-col items-center gap-2">
-				<h2 class="font-cormorantInfant">Projets</h2>
-				<ProjectCardsCarousel />
-				<Button Link="/blog" Placeholder="Voir plus ┏ (゜ω゜)=👉"></Button>
-			</section>
+			
 		</main>
 		<Footer />
 	</body>

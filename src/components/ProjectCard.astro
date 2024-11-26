@@ -3,10 +3,10 @@ const { ProjectIllu } = Astro.props
 const { Title } = Astro.props
 ---
 
-<article class="skill-card flex flex-col gap-5 px-5 pb-5 rounded-lg hover:rotate-6 hover:scale-110 max-w-72 hover:border-2 hover:border-primaryNeutral">
+<article class="skill-card flex flex-col gap-5 pb-5 rounded-lg hover:rotate-6 hover:scale-110 max-w-72 hover:border-2 hover:border-primaryNeutral">
 
-    <img class="w-full" src={ProjectIllu} alt={Title}>
-    <h3>{Title}</h3>
+    <img class="w-full rounded-t-lg" src={ProjectIllu} alt={Title}>
+    <section class="px-5 "><h3>{Title}</h3></section>
 
 </article>
 
