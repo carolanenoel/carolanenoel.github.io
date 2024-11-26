@@ -3,6 +3,7 @@ title: 'Second post'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 15 2022'
 heroImage: '/blog-placeholder-4.jpg'
+tags: ['branding', 'uxui', 'communication']
 client: 'Fantaisie Créative@2024'
 brief: 'Créer un design vibrant et décalé, mêlant couleurs vives et formes ludiques pour surprendre le spectateur. S’adressant aux amateurs de créativité audacieuse, le projet vise à casser les conventions visuelles avec une identité complète incluant logos et illustrations, dans un style fun et inattendu.'
 ---
