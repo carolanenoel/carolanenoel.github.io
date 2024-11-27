@@ -8,6 +8,7 @@ import { getCollection } from 'astro:content';
 import Project from '../../components/Project.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
+import BaseBlog from "../../layouts/BaseBlog.astro";
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -19,106 +20,16 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<ViewTransitions />
-		<style>
-			main {
-				width: 100%;
-			}
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
-				}
-			}
-		</style>
-	</head>
-	<body class="flex flex-col gap-8">
-		<Header />
-		<main class="flex flex-col items-center w-full px-5 lg:px-16 gap-10">
-			<section class="flex flex-col items-start w-full">
-				<h1 class="font-cormorantInfant lg:text-4xl">Découvrez des projets</h1>
-				<p class="font-cormorantInfant text-lg">Réels ou fictifs</p>
-			</section>
-
-			<section class="w-full">
-				<ul class="flex flex-col justify-center items-center gap-8 w-full lg:flex-row">
-					{tags.map((tag) => (
-					  <li>
-						<button class="border-2 border-black px-3 rounded">
-							{tag}
-						</button>
-					  </li>
-					))}
-				  </ul>
-			</section>
-
-			<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10 max-h-min">
-				{
-					posts.map((post) => (
-						<li class="w-full">
-							<a href={`/blog/${post.slug}/`}>
-							<Project ProjectIllu={post.data.heroImage} Title={post.data.title} Description={post.data.description}/>
-							</a>
-						</li>
-					))
-				}
-				
-			</ul>
-		</main>
-		<Footer />
-	</body>
-</html>
+<BaseBlog>
+	<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full gap-10 max-h-min">
+		{
+			posts.map((post) => (
+				<li class="w-full">
+					<a href={`/blog/${post.slug}/`}>
+					<Project ProjectIllu={post.data.heroImage} Title={post.data.title} Description={post.data.description}/>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</BaseBlog>

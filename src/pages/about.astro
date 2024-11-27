@@ -1,81 +1,68 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Button from '../components/Button.astro';
-const today = new Date();
-
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<ViewTransitions />
-	</head>
-	<body class="font-palanquin">
-		<Header />
-		<main class="flex flex-col px-5 lg:px-16 gap-20">
-			
-			<h1 class="font-cormorantInfant lg:text-4xl">À propos</h1>
+<BaseLayout>
+  <h1 class="font-cormorantInfant lg:text-4xl">À propos</h1>
 
-			<section class="flex flex-col lg:flex-row items-center gap-10">
-				<div class="flex flex-col items-center w-full gap-3.5">
-					<img class="max-w-72" src="/moe.svg" alt="Portrait simplifié">
-					<ul class="flex gap-8">
-						<li><img src="logo_behance.svg" alt="Logo Behance"></li>
-						<li><img src="logo_linkedin.svg" alt="Logo LinkedIn"></li>
-						<li><img src="logo_instagram.svg" alt="Logo Instagram"></li>
-					</ul>
-				</div>
-				<div class="flex flex-col items-start w-full gap-10">
-					<p>Étudiante en design graphique passionnée par la création. À travers mes projets, j’explore diverses facettes du design, de l'identité visuelle aux supports numériques, en cherchant toujours à allier créativité et efficacité. Ce portfolio reflète mes expériences et mon évolution en tant que future professionnelle. N’hésitez pas à me contacter pour échanger sur vos idées et projets.</p>
-					<Button Link="mailto:carolane.noel@outlook.com" Placeholder="carolane.noel@outlook.com"/>
-				</div>
-				<div class="bg-secondaryNeutral rounded-3xl px-8 py-9">
-					<p class="text-clrWhite">Passionnée par le fantastique, la fiction, le dessin les jeux vidéo, j’aime inventer des univers imaginaires où se mêlent aventures épiques, créatures sunraturelles et récits oniriques. Découvrez un aperçu de mon univers créatif à travers ce portfolio.</p>
-				</div>
-			</section>
-
-		</main>
-		<footer class="flex flex-col items-start gap-5">
-			<section class="relative">
-				<img src="/footer-illu.png" alt="Illustration footer">
-				<div class="absolute w-full bottom-2 text-base text-center text-clrWhite">
-					&copy; {today.getFullYear()} Carolane. Tous droits réservés.
-				</div>
-			</section>
-		</footer>
-	</body>
-</html>
+  <section class="flex flex-col lg:flex-row items-center gap-10">
+    <div class="flex flex-col items-center w-full gap-3.5">
+      <img class="max-w-72" src="/moe.svg" alt="Portrait simplifié" />
+      <ul class="flex gap-8">
+        <li><img src="logo_behance.svg" alt="Logo Behance" /></li>
+        <li><img src="logo_linkedin.svg" alt="Logo LinkedIn" /></li>
+        <li><img src="logo_instagram.svg" alt="Logo Instagram" /></li>
+      </ul>
+    </div>
+    <div class="flex flex-col items-start w-full gap-10">
+      <p>
+        Étudiante en design graphique passionnée par la création. À travers mes
+        projets, j’explore diverses facettes du design, de l'identité visuelle
+        aux supports numériques, en cherchant toujours à allier créativité et
+        efficacité. Ce portfolio reflète mes expériences et mon évolution en
+        tant que future professionnelle. N’hésitez pas à me contacter pour
+        échanger sur vos idées et projets.
+      </p>
+      <Button
+        Link="mailto:carolane.noel@outlook.com"
+        Placeholder="carolane.noel@outlook.com"
+      />
+    </div>
+    <div class="bg-secondaryNeutral rounded-3xl px-8 py-9">
+      <p class="text-clrWhite">
+        Passionnée par le fantastique, la fiction, le dessin les jeux vidéo,
+        j’aime inventer des univers imaginaires où se mêlent aventures épiques,
+        créatures sunraturelles et récits oniriques. Découvrez un aperçu de mon
+        univers créatif à travers ce portfolio.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
 
 <style>
-	footer {
-		
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		
-	}
-	.social-links a:hover {
-		
-	}
+  footer {
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+  .social-links a {
+  }
+  .social-links a:hover {
+  }
 
-	li {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 0 0.4em;
-		height: 2em;
-		width: 2em;
-		background-color: var(--primary-neutral);
-		border-radius: 4px;
-		cursor: pointer;
-	}
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.4em;
+    height: 2em;
+    width: 2em;
+    background-color: var(--primary-neutral);
+    border-radius: 4px;
+    cursor: pointer;
+  }
 </style>

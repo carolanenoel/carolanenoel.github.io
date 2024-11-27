@@ -1,76 +1,65 @@
 ---
-import { ViewTransitions } from "astro:transitions";
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import SkillCardCarousel from '../components/SkillCardsCarousel.astro';
-import ProjectCard from "../components/ProjectCard.astro"
-import Button from '../components/Button.astro';
+import SkillCardCarousel from "../components/SkillCardsCarousel.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Button from "../components/Button.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 const latestPosts = posts.slice(0, 3);
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<ViewTransitions />
-	</head>
-	<body class="font-palanquin">
-		<Header />
-		<main class="flex flex-col">
+<BaseLayout>
+  <section
+    class="relative z-0 flex flex-col w-full h-screen bg-livreimg bg-cover bg-bottom"
+  >
+    <section class="flex flex-col items-center gap-11 px-5 lg:px-16">
+      <div class="text-center">
+        <h1 class="font-cormorantInfant lg:text-4xl">
+          Du rêve à la réalisation
+        </h1>
+        <p class="text-lg">Design graphique et illustrations</p>
+      </div>
+      <div class="flex flex-col items-center gap-2.5">
+        <img src="/logo-icon-primary.svg" alt="Logo" />
+        <img src="/star-icon.svg" alt="Étoile" />
+      </div>
+    </section>
 
-			<section class="relative z-0 flex flex-col w-full h-screen bg-livreimg bg-cover bg-bottom">
+    <!-- <img class="absolute top-52 lg:top-0 w-full" src="/livreillu.png" alt=""> -->
+  </section>
 
-				<section class="flex flex-col items-center gap-11 px-5 lg:px-16">
-					<div class="text-center">
-						<h1 class="font-cormorantInfant lg:text-4xl">Du rêve à la réalisation</h1>
-						<p class="text-lg">Design graphique et illustrations</p>
-					</div>
-					<div class="flex flex-col items-center gap-2.5">
-						<img src="/logo-icon-primary.svg" alt="Logo">
-						<img src="/star-icon.svg" alt="Étoile">
-					</div>
-				</section>
-	
-				<!-- <img class="absolute top-52 lg:top-0 w-full" src="/livreillu.png" alt=""> -->
+  <section class="relative z-50 flex flex-col gap-20 py-8 rounded-3xl bg-white">
+    <section
+      class="flex flex-col items-center w-full gap-5 lg:gap-7 px-5 lg:px-16"
+    >
+      <h2 class="font-cormorantInfant lg:text-4xl">Services</h2>
+      <SkillCardCarousel />
+    </section>
 
-			</section>
-
-			<section class="relative z-50 flex flex-col gap-20 py-8 rounded-3xl bg-white">
-
-				<section class="flex flex-col items-center w-full gap-5 lg:gap-7 px-5 lg:px-16">
-					<h2 class="font-cormorantInfant lg:text-4xl">Services</h2>
-					<SkillCardCarousel />
-				</section>
-	
-				<section class="flex flex-col items-center gap-5 lg:gap-7 px-5 lg:px-16">
-					<h2 class="font-cormorantInfant lg:text-4xl">Projets</h2>
-					<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full justify-start gap-9 max-h-min">
-						{
-							latestPosts.map((post) => (
-								<li>
-									<a href={`/blog/${post.slug}/`}>
-										<ProjectCard ProjectIllu={post.data.heroImage} Title={post.data.title}></ProjectCard>
-									</a>
-								</li>
-							))
-						}
-					</ul>
-					<Button Link="/blog" Placeholder="Voir plus ┏ (゜ω゜)=👉"></Button>
-				</section>
-
-			</section>
-
-			
-		</main>
-		<Footer />
-	</body>
-</html>
+    <section class="flex flex-col items-center gap-5 lg:gap-7 px-5 lg:px-16">
+      <h2 class="font-cormorantInfant lg:text-4xl">Projets</h2>
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full justify-start gap-9 max-h-min"
+      >
+        {
+          latestPosts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}/`}>
+                <ProjectCard
+                  ProjectIllu={post.data.heroImage}
+                  Title={post.data.title}
+                />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <Button Link="/blog" Placeholder="Voir plus ┏ (゜ω゜)=👉" />
+    </section>
+  </section>
+</BaseLayout>
