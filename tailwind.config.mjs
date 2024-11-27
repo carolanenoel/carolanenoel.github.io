@@ -18,6 +18,9 @@ export default {
 				cormorantInfant: ['Cormorant Infant', 'serif'],
 				palanquin: ['Palanquin', 'sans-serif'],
 			},
+			backgroundImage: {
+				'livreimg': "url('/livreillu.png')",
+			}
 		},
 	},
 	plugins: [],

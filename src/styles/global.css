@@ -37,7 +37,7 @@
 body {
 	display: flex;
 	flex-direction: column;
-	gap: 2.5rem;
+	
 	/* font-family: 'Palanquin', sans-serif; */
 	background-color: var(--white);
 	background-size: 100% 600px;
@@ -125,7 +125,6 @@ hr {
 		font-size: 18px;
 	}
 	main {
-		padding: 1em;
 	}
 }
 

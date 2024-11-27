@@ -69,14 +69,12 @@ const { title, description, pubDate, updatedDate, heroImage, client, brief, tags
 						<h1 class="font-cormorantInfant">{title}</h1>
 					</div>
 					<ul class="flex gap-2.5">
-						{
-							tags.map(() => (
-								<li>
-									{tags}
-								</li>
-							))
-						}
-					</ul>
+						{tags.map((tag) => (
+						  <li class="border-2 border-black px-3 rounded">
+							{tag}
+						  </li>
+						))}
+					  </ul>
 					<div>{description}</div>
 					<slot />
 				</div>
