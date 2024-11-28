@@ -5,9 +5,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from 'astro:content';
-import Project from "../components/Project.astro";
-import FormattedDate from "../components/FormattedDate.astro";
-import ProjectCard from "../components/ProjectCard.astro";
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

@@ -15,9 +15,9 @@ const latestPosts = posts.slice(0, 3);
 
 <BaseLayout>
   <section
-    class="relative z-0 flex flex-col w-full h-screen bg-livreimg bg-cover bg-bottom"
+    class="fixed z-0 flex flex-col w-full h-screen bg-livreimg bg-cover bg-bottom bg-scroll"
   >
-    <section class="flex flex-col items-center gap-11 px-5 lg:px-16">
+    <section class=" flex flex-col w-full items-center gap-11 px-5 lg:px-16">
       <div class="text-center">
         <h1 class="font-cormorantInfant lg:text-4xl">
           Du rêve à la réalisation
@@ -33,7 +33,7 @@ const latestPosts = posts.slice(0, 3);
     <!-- <img class="absolute top-52 lg:top-0 w-full" src="/livreillu.png" alt=""> -->
   </section>
 
-  <section class="relative z-50 flex flex-col gap-20 py-8 rounded-3xl bg-white">
+  <section class="relative z-40 flex flex-col w-full gap-20 py-8 mt-[40rem] rounded-3xl bg-white">
     <section
       class="flex flex-col items-center w-full gap-5 lg:gap-7 px-5 lg:px-16"
     >
@@ -41,7 +41,7 @@ const latestPosts = posts.slice(0, 3);
       <SkillCardCarousel />
     </section>
 
-    <section class="flex flex-col items-center gap-5 lg:gap-7 px-5 lg:px-16">
+    <section class="z-50 flex flex-col w-full items-center gap-5 lg:gap-7 px-5 lg:px-16">
       <h2 class="font-cormorantInfant lg:text-4xl">Projets</h2>
       <ul
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full justify-start gap-9 max-h-min"
