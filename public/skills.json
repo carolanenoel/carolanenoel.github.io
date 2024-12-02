@@ -1,0 +1,63 @@
+[{
+    "title" : "Illustrations",
+    "image" : "/illustration.svg",
+    "tools" : [
+        "logo_illustrator.svg",
+        "logo_krita.svg",
+        "logo_ibispaint.svg",
+        "logo_clip_studio_paint.svg",
+        "logo_creative_cloud.svg"
+    ]
+},
+{
+    "title" : "UX/UI",
+    "image" : "/uxui.svg",
+    "tools" : [
+        "logo_figma.svg",
+        "logo_html.svg",
+        "logo_css.svg"
+    ]
+},
+{
+    "title" : "Développement",
+    "image" : "/dev-web.svg",
+    "tools" : [
+        "logo_html.svg",
+        "logo_css.svg",
+        "logo_js.svg",
+        "logo_tailwind.svg",
+        "logo_sass.svg",
+        "logo_react.svg",
+        "logo_wordpress.svg"
+    ]
+},
+{
+    "title" : "Branding",
+    "image" : "/branding.svg",
+    "tools" : [
+        "logo_creative_cloud.svg",
+        "logo_illustrator.svg",
+        "logo_indesign.svg",
+        "logo_photoshop.svg"
+    ]
+},
+{
+    "title" : "Audiovisuel",
+    "image" : "/audiovisuel.svg",
+    "tools" : [
+        "logo_creative_cloud.svg",
+        "logo_premiere_pro.svg",
+        "logo_after_effects.svg"
+    ]
+},
+{
+    "title" : "Character Design",
+    "image" : "/chara-design.svg",
+    "tools" : [
+        "logo_illustrator.svg",
+        "logo_krita.svg",
+        "logo_ibispaint.svg",
+        "logo_clip_studio_paint.svg"
+    ]
+}
+]

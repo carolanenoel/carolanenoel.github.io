@@ -15,7 +15,7 @@ const latestPosts = posts.slice(0, 3);
 
 <BaseLayout>
   <section
-    class="fixed z-0 flex flex-col w-full h-screen bg-livreimg bg-cover bg-bottom bg-scroll"
+    class="fixed z-0 flex flex-col w-full h-screen bg-livreimg bg-cover"
   >
     <section class=" flex flex-col w-full items-center gap-11 px-5 lg:px-16">
       <div class="text-center">
@@ -33,16 +33,51 @@ const latestPosts = posts.slice(0, 3);
     <!-- <img class="absolute top-52 lg:top-0 w-full" src="/livreillu.png" alt=""> -->
   </section>
 
-  <section class="relative z-40 flex flex-col w-full gap-20 py-8 mt-[40rem] rounded-3xl bg-white">
+  <section class="relative z-40 flex flex-col w-full gap-20 py-8 mt-[40rem] rounded-t-3xl bg-clrWhite">
+
+    <section class="flex flex-wrap w-full items-center gap-1 px-5 lg:px-16 lg:text-2xl">
+      <div class="">Passionnée </div>
+      <div class="">par le</div>
+      <div class="">fantastique</div>
+      <div class="w-10 lg:w-20 mx-1 lg:mx-3"><img src="/fantasy.svg" alt="Fantasy"></div>
+      <div class="">la fiction,</div>
+      <div class="">le dessin,</div>
+      <div class="">les jeux-vidéos,</div>
+      <div class="">j'invente</div>
+      <div class="">des univers</div>
+      <div class="">imaginaires</div>
+      <div class="">par le</div>
+      <div class="w-10 lg:w-20 mx-1 lg:mx-3"><img src="/fiction.svg" alt="Fiction"></div>
+      <div class="">où se mêlent</div>
+      <div class="">aventures épiques</div>
+      <div class="">par le</div>
+      <div class="w-10 lg:w-20 mx-1 lg:mx-3"><img src="/gaming.svg" alt="Gaming"></div>
+      <div class="">et récits oniriques.</div>
+      <div class="">Découvez</div>
+      <div class="">un aperçu de</div>
+      <div class="">mon univers créatif</div>
+      <div class="">à travers</div>
+      <div class="">ce portfolio.</div>
+      <div class="w-10 lg:w-20 mx-1 lg:mx-3"><img src="/art.svg" alt="Art"></div>
+      </div>
+    </section>
+
+
     <section
       class="flex flex-col items-center w-full gap-5 lg:gap-7 px-5 lg:px-16"
     >
-      <h2 class="font-cormorantInfant lg:text-4xl">Services</h2>
+      <div class="w-full">
+        <p>Que puis-je faire ?</p>
+        <h2 class="font-cormorantInfant lg:text-4xl">Services</h2>
+      </div>
       <SkillCardCarousel />
     </section>
 
     <section class="z-50 flex flex-col w-full items-center gap-5 lg:gap-7 px-5 lg:px-16">
-      <h2 class="font-cormorantInfant lg:text-4xl">Projets</h2>
+      <div class="w-full">
+        <p>Qu'ais-je déjà fais ?</p>
+        <h2 class="font-cormorantInfant lg:text-4xl">Projets</h2>
+      </div>
       <ul
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full justify-start gap-9 max-h-min"
       >
