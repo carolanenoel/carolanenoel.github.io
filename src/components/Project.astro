@@ -5,9 +5,9 @@ const { Description } = Astro.props
 // voir pour ajouter tags
 ---
 
-<article class="flex flex-col items-start w-full gap-5 rounded-lg">
+<article class="flex flex-col items-start w-full gap-5 rounded-lg group">
 
-    <img class="rounded-lg w-full" src={ProjectIllu} alt={Title}>
+    <img class="transition ease-in-out duration-300 rounded-lg w-full group-hover:saturate-[.25]" src={ProjectIllu} alt={Title}>
     <h3 class="w-full font-cormorantInfant text-start">{Title}</h3>
     <p class="w-full text-start">{Description}</p>
 

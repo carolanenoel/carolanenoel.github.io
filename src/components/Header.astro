@@ -3,7 +3,7 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="sticky  z-[100]  flex w-full bg-clrWhite">
+<header class="fixed z-[100] flex w-full bg-clrWhite rounded-b-3xl">
 	<nav class="relative z-50 flex w-full lg:px-16 justify-between items-center">
 		<a href="/">
 			<img src="/logo-icon.svg" alt="Logo" class="w-16">
@@ -19,7 +19,7 @@ import { SITE_TITLE } from '../consts';
 			<li><HeaderLink href="/about">About</HeaderLink></li>
 		</ul>
 	</nav>
-	<div class="navbar-menu relativepx-5 hidden bg-clrWhite">
+	<div class="navbar-menu relative px-5 hidden bg-clrWhite">
 		<div class="navbar-backdrop fixed inset-0"></div>
 		<nav class="fixed inset-0 flex flex-col bg-clrWhite">
 			<div class="flex w-full justify-between px-5">

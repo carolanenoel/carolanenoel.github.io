@@ -3,19 +3,7 @@ const { Link } = Astro.props
 const { Icon } = Astro.props
 ---
 
-<button class="round-button flex justify-center items-center w-12 h-12 rounded-full">
-    <img src={Icon} alt="">
-</button>
-
-
-<style>
-    .round-button {
-        background-color: var(--primary-neutral);
-    }
-    .round-button:hover {
-        background-color: var(--primary-dark);
-    }
-    .round-button:focus {
-        background-color: var(--primary-light);
-    }
-</style>
+<a class="cursor-pointer flex justify-center items-center w-12 h-12 rounded-full bg-primaryNeutral overflow-hidden relative group">
+    <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primaryDark group-hover:h-full"></span>
+    <span class="relative"><img src={Icon} alt=""></span>
+</a>

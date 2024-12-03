@@ -3,10 +3,10 @@ const { Link } = Astro.props
 const {Placeholder} = Astro.props
 ---
 
-<a href={Link} class="button flex justify-center items-center rounded-lg px-7 py-3 text-white">
-    {Placeholder}
+<a href={Link} class="flex justify-center items-center rounded-lg px-7 py-3 text-clrWhite bg-primaryNeutral overflow-hidden relative group">
+    <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primaryDark group-hover:h-full"></span>
+    <span class="relative">{Placeholder}</span>
 </a>
-
 
 <style>
     .button {

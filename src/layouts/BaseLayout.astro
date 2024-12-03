@@ -5,6 +5,8 @@ import Header from '../components/Header.astro';
 import Footer from "../components/Footer.astro";
 const today = new Date();
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+import RoundButton from "../components/RoundButton.astro";
 ---
 
 <!doctype html>
@@ -14,8 +16,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<ViewTransitions />
 	</head>
 	<body class="font-palanquin">
-		<Header />
-		<main class="flex flex-col w-full">
+		<div class="animate-bounce z-[100] fixed bottom-3 right-3"><RoundButton Link="#header" Icon="/src/assets/arrow.svg"></RoundButton></div>
+		<Header id="header" />
+		<main class="flex flex-col w-full pt-32">
 			<slot/>
 		</main>
 		<Footer />
