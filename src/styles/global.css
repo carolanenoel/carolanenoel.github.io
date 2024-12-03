@@ -80,9 +80,6 @@ strong,
 b {
 	font-weight: 700;
 }
-p {
-	
-}
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -92,9 +89,6 @@ input {
 }
 table {
 	width: 100%;
-}
-img {
-	
 }
 code {
 	padding: 2px 5px;
@@ -121,8 +115,6 @@ hr {
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
-	}
-	main {
 	}
 }
 
