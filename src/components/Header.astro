@@ -1,9 +1,11 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+
+import RoundButton from './RoundButton.astro';
 ---
 
-<header class="fixed z-[100] flex w-full bg-clrWhite rounded-b-3xl">
+<header id="header" class="fixed z-[100] flex w-full bg-clrWhite rounded-b-3xl">
 	<nav class="relative z-50 flex w-full lg:px-16 justify-between items-center">
 		<a href="/">
 			<img src="/logo-icon.svg" alt="Logo" class="w-16">
@@ -38,6 +40,9 @@ import { SITE_TITLE } from '../consts';
 		</nav>
 	</div>
 </header>
+
+<div class="animate-bounce z-[100] fixed bottom-3 right-3"><RoundButton Link="#header" Icon="/src/assets/arrow.svg"></RoundButton></div>
+
 <style>
 	header {
 		margin: 0;
