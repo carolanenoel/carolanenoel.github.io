@@ -19,7 +19,7 @@ export default {
 				palanquin: ['Palanquin', 'sans-serif'],
 			},
 			backgroundImage: {
-				'livreimg': "url('/livreillu.png')",
+				'livreimg': "url('/src/assets/livreillu.png')",
 			}
 		},
 	},
