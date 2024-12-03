@@ -1,0 +1,10 @@
+---
+const { Link } = Astro.props
+const {Placeholder} = Astro.props
+---
+
+<a href={Link} class="capitalize relative inline-block px-3 rounded overflow-hidden group">
+    <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-clrDark group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+    <span class="absolute inset-0 w-full h-full bg-clrWhite border-2 border-clrDark group-hover:bg-clrDark"></span>
+    <span class="relative text-base text-clrDark group-hover:text-clrWhite">{Placeholder}</span>
+</a>

@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from 'astro:content';
 import RoundButton from "../components/RoundButton.astro";
+import Tag from "../components/Tag.astro";
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -41,13 +42,6 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 			ul li:first-child img {
 				width: 100%;
 			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
 			ul li a {
 				display: block;
 			}
@@ -68,18 +62,12 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 				box-shadow: var(--box-shadow);
 			}
 			@media (max-width: 720px) {
-				ul {
-					gap: 0.5em;
-				}
 				ul li {
 					width: 100%;
 					text-align: center;
 				}
 				ul li:first-child {
 					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
 				}
 			}
 		</style>
@@ -89,22 +77,17 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 		<Header />
 		<main class="flex flex-col items-center w-full px-5 lg:px-16 gap-10 pt-32">
 			<section class="flex flex-col items-start w-full">
-				<h1 class="font-cormorantInfant lg:text-4xl">Découvrez des projets</h1>
-				<p class="font-cormorantInfant text-lg">Réels ou fictifs</p>
+				<h1 class="font-cormorantInfant lg:text-5xl">Découvrez des projets</h1>
+				<p class="font-cormorantInfant text-lg lg:text-2xl">Réels ou fictifs</p>
 			</section>
 
-			<section class="w-full">
-				<ul class="flex flex-col justify-center items-center gap-8 w-full lg:flex-row">
-					<li><a class="border-2 border-black px-3 rounded" href="/blog">tout</a></li>
-					{tags.map((tag) => (
-					  <li>
-						<a href={`/blog/${tag}`} class="border-2 border-black px-3 rounded">
-							{tag}
-						</a>
-					  </li>
-					))}
-				  </ul>
-			</section>
+			<ul class="flex flex-col w-full items-start md:flex-row md:gap-8">
+				<li><Tag Link="/blog" Placeholder="tout"></Tag></li>
+				{tags.map((tag) => (
+				<li><Tag Link={`/blog/${tag}`} Placeholder={tag}></Tag>
+				</li>
+				))}
+			</ul>
 
             <section>
                 <slot/>
