@@ -4,102 +4,98 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 import RoundButton from "../components/RoundButton.astro";
 import Tag from "../components/Tag.astro";
 import Cursor from "../components/Cursor.astro";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 // const allPosts = await getCollection("blog");
 
 const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
-
-
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<ViewTransitions />
-		<style>
-			main {
-				width: 100%;
-			}
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: rgb(var(--black));
-				line-height: 1;
-			}
-			.date {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: rgb(var(--accent));
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
-			@media (max-width: 720px) {
-				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-			}
-			a:hover {
-        cursor: url('../assets/star-icon-hover.svg'), auto;;
-    }
-		</style>
-	</head>
-	<body class="flex flex-col gap-8 font-palanquin">
-		<!-- <Cursor /> -->
-		
-		<Header />
-		<main class="flex flex-col items-center w-full px-5 lg:px-16 gap-10 pt-32">
-			<section class="flex flex-col items-start w-full">
-				<h1 class="font-cormorantInfant lg:text-5xl">Découvrez des projets</h1>
-				<p class="font-cormorantInfant text-lg lg:text-2xl">Réels ou fictifs</p>
-			</section>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <ViewTransitions />
+    <style>
+      main {
+        width: 100%;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul li * {
+        text-decoration: none;
+        transition: 0.2s ease;
+      }
+      ul li:first-child {
+        text-align: center;
+      }
+      ul li:first-child img {
+        width: 100%;
+      }
+      ul li a {
+        display: block;
+      }
+      .title {
+        margin: 0;
+        color: rgb(var(--black));
+        line-height: 1;
+      }
+      .date {
+        margin: 0;
+        color: rgb(var(--gray));
+      }
+      ul li a:hover h4,
+      ul li a:hover .date {
+        color: rgb(var(--accent));
+      }
+      ul a:hover img {
+        box-shadow: var(--box-shadow);
+      }
+      @media (max-width: 720px) {
+        ul li {
+          width: 100%;
+          text-align: center;
+        }
+        ul li:first-child {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex flex-col gap-8 font-palanquin">
+    <!-- <Cursor /> -->
 
-			<ul class="flex flex-col w-full items-start md:flex-row md:gap-8">
-				<li><Tag Link="/blog" Placeholder="tout"></Tag></li>
-				{tags.map((tag) => (
-				<li><Tag Link={`/blog/${tag}`} Placeholder={tag}></Tag>
-				</li>
-				))}
-			</ul>
+    <Header />
+    <main class="flex flex-col items-center w-full px-5 lg:px-16 gap-10 pt-32">
+      <section class="flex flex-col items-start w-full">
+        <h1 class="font-cormorantInfant lg:text-5xl">Découvrez des projets</h1>
+        <p class="font-cormorantInfant text-lg lg:text-2xl">Réels ou fictifs</p>
+      </section>
 
-            <section>
-                <slot/>
-            </section>
+      <ul class="flex flex-col w-full items-start md:flex-row md:gap-8">
+        <li><Tag Link="/blog" Placeholder="tout" /></li>
+        {
+          tags.map((tag) => (
+            <li>
+              <Tag Link={`/blog/${tag}`} Placeholder={tag} />
+            </li>
+          ))
+        }
+      </ul>
 
-			
-		</main>
-		<Footer />
-	</body>
+      <section>
+        <slot />
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
