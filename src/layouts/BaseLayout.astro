@@ -7,6 +7,7 @@ const today = new Date();
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 import RoundButton from "../components/RoundButton.astro";
+import Cursor from "../components/Cursor.astro";
 ---
 
 <!doctype html>
@@ -14,8 +15,14 @@ import RoundButton from "../components/RoundButton.astro";
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<ViewTransitions />
+		<style>
+			a:hover {
+        cursor: url('../assets/star-icon-hover.svg'), auto;;
+    }
+		</style>
 	</head>
 	<body class="font-palanquin">
+		<!-- <Cursor /> -->
 		
 		<Header />
 		<main class="flex flex-col w-full gap-8 pt-32">
@@ -24,3 +31,4 @@ import RoundButton from "../components/RoundButton.astro";
 		<Footer />
 	</body>
 </html>
+

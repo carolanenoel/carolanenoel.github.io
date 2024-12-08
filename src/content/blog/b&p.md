@@ -30,3 +30,8 @@ brief: 'Créer un design vibrant et décalé, mêlant couleurs vives et formes l
     </ul>
 </article>
 
+
+
+Étape 1
+
+Après avoir trouvé notre thème, nous devions choisir une localisation logique où implanter notre bar. Nous sommes ainsi passés par une analyse en reliant différentes connexions entre elles.

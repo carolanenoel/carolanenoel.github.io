@@ -1,0 +1,23 @@
+---
+
+---
+
+<div id="cursor"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cursor = document.getElementById("cursor");
+
+    if (cursor) {
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+      });
+    } else {
+      console.error("Élément #cursor non trouvé");
+    }
+  });
+
+  
+
+</script>
