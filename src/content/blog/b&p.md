@@ -43,11 +43,11 @@ Après cela, nous avons établi quatre personae afin de tirer des recommandation
 Après analyse, nous sommes passés à la création de l'identité visuelle du bar : nom, palette de couleurs, police d'écriture, logo et autres éléments graphiques. Avant cela, nous nous sommes aidés d'un moodboard pour y regrouper toutes nos inspirations.
 Nous avons dans un premier temps établi notre palette de couleurs et nos polices d'écriture, avant de créer plusieurs tentatives de logos.
 
-Les couleurs rappellent différentes références : les pancakes, l'automne et les castors.
-
+Les couleurs rappellent différentes références : les pancakes, l'automne et les castors.\
 La police d'écriture principale choisie, Bruna, présente des formes rondes et modernes pour montrer le côté chaleureux et contemporain (même en gardant une partie traditionnelle dans les recettes). Elle a été déclinée sous plusieurs épaisseurs pour jouer sur la hiérarchie ou accentuer certains éléments. L'utilisation des lettres capitales aussi. Nous avons également choisi la police d'écriture Yeseva One mais à moindre utilisation, elle est notamment présente sur les menus.
 
-Puisque nous souhaitions intégrer une mascotte à l'identité du bar, nous avons décidé de l'utiliser dans le logo. Nous l'avons décliné sous plusieurs formes selon le format sur lequel il se retrouve : un principal, un secondaire et deux simples. Nous l'avons également décliné selon les couleurs de notre identité pour l'adapter à plusieurs fonds.
+Puisque nous souhaitions intégrer une mascotte à l'identité du bar, nous avons décidé de l'utiliser dans le logo. Nous l'avons décliné sous plusieurs formes selon le format sur lequel il se retrouve : un principal, un secondaire et deux simples. Nous l'avons également décliné selon les couleurs de notre identité pour l'adapter à plusieurs fonds.\
+Le logo est basé sur un cercle rappelant la forme du pancake, et la ligne non continue représente celui-ci déjà grignoté.
 
 
 ### **Étape 3 : Réajustements**
