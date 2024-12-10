@@ -20,6 +20,10 @@ export default {
 			},
 			backgroundImage: {
 				'livreimg': "url('/src/assets/livreillu.png')",
+			},
+			cursor: {
+				'star' : "url('/src/assets/star-icon-black.svg')",
+				'star-hover' : "url('/src/assets/star-icon-hover.svg'), pointer",
 			}
 		},
 	},
