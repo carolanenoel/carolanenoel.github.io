@@ -44,13 +44,19 @@ Après analyse, nous sommes passés à la création de l'identité visuelle du b
 Nous avons dans un premier temps établi notre palette de couleurs et nos polices d'écriture, avant de créer plusieurs tentatives de logos.
 
 Les couleurs rappellent différentes références : les pancakes, l'automne et les castors.\
-La police d'écriture principale choisie, Bruna, présente des formes rondes et modernes pour montrer le côté chaleureux et contemporain (même en gardant une partie traditionnelle dans les recettes). Elle a été déclinée sous plusieurs épaisseurs pour jouer sur la hiérarchie ou accentuer certains éléments. L'utilisation des lettres capitales aussi. Nous avons également choisi la police d'écriture Yeseva One mais à moindre utilisation, elle est notamment présente sur les menus.
+La police d'écriture principale choisie, **Bruna**, présente des formes rondes et modernes pour montrer le côté chaleureux et contemporain (même en gardant une partie traditionnelle dans les recettes). Elle a été déclinée sous plusieurs épaisseurs pour jouer sur la hiérarchie ou accentuer certains éléments. L'utilisation des lettres capitales aussi. Nous avons également choisi la police d'écriture **Yeseva One** mais à moindre utilisation, elle est notamment présente sur les menus.
 
 Puisque nous souhaitions intégrer une mascotte à l'identité du bar, nous avons décidé de l'utiliser dans le logo. Nous l'avons décliné sous plusieurs formes selon le format sur lequel il se retrouve : un principal, un secondaire et deux simples. Nous l'avons également décliné selon les couleurs de notre identité pour l'adapter à plusieurs fonds.\
-Le logo est basé sur un cercle rappelant la forme du pancake, et la ligne non continue représente celui-ci déjà grignoté.
+Le logo est basé sur un cercle rappelant la forme du pancake, et la ligne non continue représente celui-ci déjà grignoté. Le **v** du terme _Beaver_ (_castor_ en anglais) souligne la **variété** des recettes proposées et rappelle les dents du castor inclinées.
 
+La mascotte du bar est donc un castor, symbole du Canada et animal à l'air chaleureux. Il a sur sa tête une motte de beurre, du sirop d'érable et des fruits pour rappeler le topping traditionnel que l'on retrouve sur les pancakes. Pour permettre au maximum de clients de se sentir représentés, la mascotte a été déclinée en plusieurs profils types.
+
+Les éléments graphiques regroupent les illustrations et les formes. Les illustrations reprennent notre thème avec une esthétique "dessinée à la main" pour accentuer lee côté traditionnel. En blanc sur fond noir, elles rappellent les dessins à la craie que l'on peut retrouver sur les tableaux noirs.\
+Au niveau des formes, on retrouve souvent le cercle pour les pancakes, dont une version "grignotée", ainsi que des lignes aux bords arrondis.
+
+Une fois l'identité visuelle définie, nous sommes passés à la création des supports de communication : un site Internet, des posts sur les réseaux sociaux, les cartes du bar, des sets de tables, des affiches de lancement, l'enseigne et des panneaux. Nous avons réalisé tous nos supports en anglais et en français.
 
 ### **Étape 3 : Réajustements**
-
+Tout au long du projet, nous sommes passés par plusieurs phases de réajustement selon les retours de nos professeurs et intervenants. De cette manière, nous avons pu améliorer continuellement nos travaux jusqu'à la fin. C'est, en plus de leur passage dans nos groupes pendant que nous étions en cours, durant des oraux que nous avons pu exposer notre projet et en recevoir des commentaires.
 
 ### **Étape 4 : Présentation**
