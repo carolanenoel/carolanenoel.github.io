@@ -1,11 +1,11 @@
 ---
-title: 'The Beaver & his Pancakes'
+title: 'Foxy & Chicky'
 description: "Créer l'identité visuelle et la communication d'un bar à pancakes à Bruxelles sur le thème du Canada."
-pubDate: '23 February 2024'
-heroImage: '/src/assets/presentation_betp/presentation_betp_1.jpg'
-tags: ['branding', 'uxui', 'communication']
+pubDate: '5 April 2024'
+heroImage: '/src/assets/presentation_fetc/cover.jpg'
+tags: ['jeu', 'uxui', 'communication']
 client: 'Projet fictif @2024'
-brief: "Création et mise en place d’une campagne de communication visuelle pour la création d’un “Bar à thème”. L'équipe, un mini studio de création, est constituée constituée de 2 étudiants. On donne : un thème unique (chocolat, café, salade, tartes, graines, bière, e-sport…) et une localisation dans une ville cosmopolite (Paris, Berlin, Londres...)"
+brief: "En tant que producteurs de contenus juniors, les étudiants, par équipe de 3 ou 4, doivent, pour le lancement d’un mini jeu indépendant (Indie Game), produire et héberger l’ensemble des contenus multimédias."
 ---
 
 <article class="flex flex-col w-full py-7 px-10 my-6 gap-5 text-clrWhite bg-secondaryNeutral rounded-xl">
