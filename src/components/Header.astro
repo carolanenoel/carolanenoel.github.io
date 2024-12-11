@@ -5,43 +5,33 @@ import { SITE_TITLE } from '../consts';
 import RoundButton from './RoundButton.astro';
 ---
 
-<header id="header" class="fixed z-[100] flex w-full bg-clrWhite rounded-b-3xl">
-	<nav class="relative z-50 flex w-full lg:px-16 justify-between items-center">
-		<a href="/">
-			<img src="/logo-icon.svg" alt="Logo" class="w-16">
-		</a>
-		<div class="lg:hidden">
-			<button class="navbar-burger">
-				<img src="/menu-icon.svg" alt="">
-			</button>
-		</div>
-		<ul class="internal-links hidden lg:flex lg:mx-auto lg:flex lg:items- lg:justify-end lg:w-full">
-			<li><HeaderLink href="/">Home</HeaderLink></li>
-			<li><HeaderLink href="/blog">Projets</HeaderLink></li>
-			<li><HeaderLink href="/about">About</HeaderLink></li>
-		</ul>
+<header class="fixed top-0 left-0 w-full bg-clrWhite z-50">
+	<nav class="container mx-auto flex items-center justify-between p-4">
+	  <!-- Logo -->
+	  <a href="/">
+		<img src="/src/assets/logo-icon.svg" class="w-16" alt="Logo">
+	  </a>
+  
+	  <!-- Navigation Links -->
+	  <ul class="hidden md:flex space-x-6">
+		<li><HeaderLink href="/">Home</HeaderLink></li>
+		<li><HeaderLink href="/blog">Projets</HeaderLink></li>
+		<li><HeaderLink href="/about">About</HeaderLink></li>
+	  </ul>
+  
+	  <!-- Mobile Menu Button -->
+	  <button id="menu-toggle" class="md:hidden focus:outline-none">
+		<img src="/menu-icon.svg" alt="">
+	  </button>
 	</nav>
-	<div class="navbar-menu relative px-5 hidden bg-clrWhite">
-		<div class="navbar-backdrop fixed inset-0"></div>
-		<nav class="fixed inset-0 flex flex-col bg-clrWhite">
-			<div class="flex w-full justify-between px-5">
-				<a href="/">
-					<img src="/logo-icon.svg" alt="Logo" class="w-16">
-				</a>
-				<button class="navbar-close">
-					<img src="/close-icon.svg" alt="">
-				</button>
-			</div>
-			<div class="internal-links flex flex-col w-full items-start text-3xl">
-				<HeaderLink href="/">Home</HeaderLink>
-				<HeaderLink href="/blog">Projets</HeaderLink>
-				<HeaderLink href="/about">About</HeaderLink>
-			</div>
-		</nav>
-	</div>
+  
+	<!-- Mobile Menu -->
+	<ul id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 bg-gray-100 p-4">
+		<li><HeaderLink href="/">Home</HeaderLink></li>
+		<li><HeaderLink href="/blog">Projets</HeaderLink></li>
+		<li><HeaderLink href="/about">About</HeaderLink></li>
+	</ul>
 </header>
-
-<!-- <div class="animate-bounce z-[100] fixed bottom-3 right-3"><RoundButton Link="#header" Icon="/src/assets/arrow.svg"></RoundButton></div> -->
 
 <style>
 	header {
@@ -88,47 +78,34 @@ import RoundButton from './RoundButton.astro';
 	.internal-links {
 		font-family: 'Cormorant Infant', serif;
 	}
+
 </style>
 
 <script>
-	// Burger menus
-document.addEventListener('DOMContentLoaded', function() {
-    // open
-    const burger = document.querySelectorAll('.navbar-burger');
-    const menu = document.querySelectorAll('.navbar-menu');
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
 
-    if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
+// Vérifiez l'existence des éléments avant d'ajouter des événements
+if (menuToggle && mobileMenu) {
+  // Fonction pour basculer la visibilité du menu
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('hidden'); // Affiche/masque le menu
+	console.log('Menu visible:', !mobileMenu.classList.contains('hidden'));
+  };
 
-    // close
-    const close = document.querySelectorAll('.navbar-close');
-    const backdrop = document.querySelectorAll('.navbar-backdrop');
+  // Écouteur pour ouvrir/fermer le menu via le bouton burger
+  menuToggle.addEventListener('click', toggleMenu);
 
-    if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
+  // Écouteurs sur les liens du menu pour fermer le menu après un clic
+  const menuLinks = mobileMenu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden'); // Cache le menu
+      }
+    });
+  });
+}
 
-    if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
-    }
-});
+
 </script>
