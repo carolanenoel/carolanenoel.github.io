@@ -1,9 +1,9 @@
 ---
-title: "Affiches Centre d'Information et de Recrutement de la Gendarmerie"
+title: "Visual Novel - Disparition du Musée"
 description: "Créer l'identité visuelle et la communication d'un bar à pancakes à Bruxelles sur le thème du Canada."
 pubDate: '20 Decembre 2024'
 heroImage: '/src/assets/presentation_betp/presentation_betp_1.jpg'
-tags: ['communication', 'illustration']
+tags: ['communication', 'jeu']
 client: "Centre d'Information et de Recrutement de la Gendarmerie de Limoges @2024"
 brief: "Création et mise en place d’une campagne de communication visuelle pour la création d’un “Bar à thème”. L'équipe, un mini studio de création, est constituée constituée de 2 étudiants. On donne : un thème unique (chocolat, café, salade, tartes, graines, bière, e-sport…) et une localisation dans une ville cosmopolite (Paris, Berlin, Londres...)"
 ---
