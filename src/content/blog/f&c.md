@@ -13,7 +13,7 @@ brief: "En tant que producteurs de contenus juniors, les étudiants, par équipe
     <ul class="grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-4 w-full">
         <li class="flex flex-col lg:px-5 gap-2 lg:gap-1">
             <h3 class="text-lg">#1 - Recherches et analyse</h3>
-            <p>Nous avons commencé par recueillir des idées et des références du même jour pour avoir un aperçu global de ce qui existe déjà et nous inspirer. Nous y avons défini le genre du jeu, le scénario, les mécanismes de jeu uniques et l’univers graphique et sonore.</p>
+            <p>Nous avons commencé par recueillir des idées et des références du même jour pour avoir un aperçu global de ce qui existe déjà et nous inspirer. Nous y avons défini le genre du jeu, le scénario, les mécanismes et l’univers graphique et sonore.</p>
         </li>
         <li class="flex flex-col lg:px-5 gap-2 lg:gap-1">
             <h3 class="text-lg">#2 - Design et prototypage</h3>
@@ -31,7 +31,7 @@ brief: "En tant que producteurs de contenus juniors, les étudiants, par équipe
 </article>
 
 ### **Étape 1 : Recherches et analyse**
-
+Nous avons dans un premier temps fait des recherches pour imaginer le concept de notre jeu. 
 
 ### **Étape 2 : Design et prototypage**
 
