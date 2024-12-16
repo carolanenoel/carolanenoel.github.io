@@ -12,7 +12,7 @@ brief: "En tant que producteurs de contenus juniors, les étudiants, par équipe
     <h2 class="font-cormorantInfant text-3xl">Processus créatif</h2>
     <ul class="grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-4 w-full">
         <li class="flex flex-col lg:px-5 gap-2 lg:gap-1">
-            <h3 class="text-lg">#1 - Recherches et analyse</h3>
+            <h3 class="text-lg">#1 - Recherches et concept</h3>
             <p>Nous avons commencé par recueillir des idées et des références du même jour pour avoir un aperçu global de ce qui existe déjà et nous inspirer. Nous y avons défini le genre du jeu, le scénario, les mécanismes et l’univers graphique et sonore.</p>
         </li>
         <li class="flex flex-col lg:px-5 gap-2 lg:gap-1">
@@ -30,8 +30,12 @@ brief: "En tant que producteurs de contenus juniors, les étudiants, par équipe
     </ul>
 </article>
 
-### **Étape 1 : Recherches et analyse**
+### **Étape 1 : Recherches et concept**
 Nous avons dans un premier temps fait des recherches pour imaginer le concept de notre jeu. 
+
+Le joueur contrôle très birèvement un personnage, il peut sauter et se baisser pour esquiver les obstacles, les niveaux étant des side scroller à défilement automatique.
+
+Une fois le concept défini, nous avons créé la trame de notre jeu
 
 ### **Étape 2 : Design et prototypage**
 
