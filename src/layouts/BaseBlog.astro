@@ -19,6 +19,7 @@ const tags = [...new Set(posts.map((post) => post.data.tags).flat())];
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <link rel="icon" href="/favicon.svg">
     <ViewTransitions />
     <style>
       main {
