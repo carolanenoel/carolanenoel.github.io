@@ -1,9 +1,22 @@
 ---
 const { Link } = Astro.props
 const {Placeholder} = Astro.props
+const { variant = "primary" } = Astro.props
+
+const baseStyles = "px-4 py-2 rounded font-semibold transition-all duration-300";
+const variantStyles = {
+  primary: "flex justify-center items-center rounded-lg px-7 py-3 text-clrWhite bg-primaryNeutral overflow-hidden relative group",
+  secondary: "flex justify-center items-center rounded-lg px-7 py-3 overflow-hidden relative group border-2 border-primaryNeutral",
+};
 ---
 
-<a href={Link} class="flex justify-center items-center rounded-lg px-7 py-3 text-clrWhite bg-primaryNeutral overflow-hidden relative group">
+<!-- <a href={Link} class="flex justify-center items-center rounded-lg px-7 py-3 text-clrWhite bg-primaryNeutral overflow-hidden relative group">
     <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primaryDark group-hover:h-full"></span>
     <span class="relative">{Placeholder}</span>
+</a> -->
+
+<a class={`${baseStyles} ${variantStyles[variant]}`}>
+    <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primaryDark group-hover:h-full"></span>
+    <span class="relative">{Placeholder}</span>
+    <slot />
 </a>
