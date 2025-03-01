@@ -1,98 +1,156 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 // import FormattedDate from '../components/FormattedDate.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage, client, brief, tags } = Astro.props;
-
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  client,
+  brief,
+  tags,
+  annee,
+  duree,
+} = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<link rel="icon" href="/favicon.svg">
-		<ViewTransitions />
-		<style>
-			main {
-				
-			}
-			.hero-image {
-				width: 100%;
-				border-radius: 12px;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <ViewTransitions />
+    <style>
+      main {
+      }
+      .hero-image {
+        width: 100%;
+        border-radius: 12px;
+      }
+      .hero-image img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: var(--box-shadow);
+      }
+      .prose {
+        width: 720px;
+        max-width: calc(100% - 2em);
+        margin: auto;
+        padding: 1em;
+        color: rgb(var(--gray-dark));
+      }
+      .title {
+        margin-bottom: 1em;
+        padding: 1em 0;
+        text-align: center;
+        line-height: 1;
+      }
+      .title h1 {
+        margin: 0 0 0.5em 0;
+      }
+      .date {
+        margin-bottom: 0.5em;
+        color: rgb(var(--gray));
+      }
+      .last-updated-on {
+        font-style: italic;
+      }
+      .image-container {
+        position: relative;
+      }
 
-	<body class="w-full font-palanquin">
-		<!-- <Cursor /> -->
-		
-		<Header />
-		<main class="flex flex-col px-5 w-full lg:px-16 gap-6 pt-32">
-			<article class="flex flex-col w-full lg:flex-row gap-5 lg:gap-8 my-6">
-				<div class="flex justify-center items-center hero-image lg:h-[26rem] overflow-hidden">
-					{heroImage && <img width={1020} height={510} src={heroImage} alt="Image accueil" />}
-				</div>
-				<div class="flex flex-col gap-3">
-					<div class="">
-						<h1 class="font-cormorantInfant">{title}</h1>
-					</div>
-					<ul class="flex gap-2.5">
-						{tags.map((tag) => (
-						  <li class="border-2 border-black px-3 rounded">
-							{tag}
-						  </li>
-						))}
-					  </ul>
-					<div>{description}</div>
-					
-				</div>
-			</article>
-			<article class="flex flex-col gap-12 w-full lg:flex-row lg:justify-between my-6">
-				<div class="flex flex-col gap-2 lg:w-1/3">
-					<p class="font-cormorantInfant text-3xl">Client</p>
-					<p>{client}</p>
-				</div>
-				<div class="flex flex-col gap-2">
-					<p class="font-cormorantInfant text-3xl">Brief</p>
-					<p>{brief}</p>
-				</div>
-			</article>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+      .image-container::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+		opacity: .3;
+      }
+    </style>
+  </head>
+
+  <body class="w-full font-palanquin">
+    <Header />
+    <main class="flex flex-col px-5 w-full lg:px-16 gap-6 pt-32">
+      <div
+        class="flex justify-center items-center hero-image lg:h-[16rem] overflow-hidden image-container"
+      >
+        {heroImage && <img src={heroImage} alt="Image accueil" class="w-full object-center" />}
+      </div>
+
+      <article
+        class="flex flex-col justify-between w-full lg:flex-row gap-5 lg:gap-20 my-6"
+      >
+        <div class="flex flex-col gap-3">
+          <div class="">
+            <h1 class="font-cormorantInfant text-6xl">{title}</h1>
+          </div>
+          <div class="text-lg">{description}</div>
+        </div>
+
+        <article class="grid grid-cols-2 gap-5 w-full lg:justify-between my-6">
+          <div class="flex flex-col gap-1">
+            <p
+              class="font-cormorantInfant text-3xl font-bold text-primaryNeutral"
+            >
+              Client
+            </p>
+            <p class="text-lg">{client}</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p
+              class="font-cormorantInfant text-3xl font-bold text-primaryNeutral"
+            >
+              Année
+            </p>
+            <p class="text-lg">{annee}</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p
+              class="font-cormorantInfant text-3xl font-bold text-primaryNeutral"
+            >
+              Durée
+            </p>
+            <p class="text-lg">{duree}</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p
+              class="font-cormorantInfant text-3xl font-bold text-primaryNeutral"
+            >
+              Tags
+            </p>
+            <ul class="flex gap-1">
+              {
+                tags.map((tag) => (
+                  <li class="bg-primaryNeutral text-clrWhite px-3 rounded text-base">
+                    {tag}
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </article>
+      </article>
+
+      <div class="flex flex-col gap-2">
+        <p class="font-cormorantInfant text-3xl font-bold text-primaryNeutral">
+          Brief
+        </p>
+        <p class="text-lg">{brief}</p>
+      </div>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

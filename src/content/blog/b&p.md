@@ -4,7 +4,9 @@ description: "Créer l'identité visuelle et la communication d'un bar à pancak
 pubDate: '23 February 2024'
 heroImage: '/presentation_betp/presentation_betp_1.jpg'
 tags: ['branding', 'uxui', 'communication']
-client: 'Projet étudiant @2024'
+client: 'Projet étudiant'
+annee: "2024"
+duree: "3 semaines"
 brief: "Création et mise en place d’une campagne de communication visuelle pour la création d’un “Bar à thème”. L'équipe, un mini studio de création, est constituée de 2 à 3 étudiants. On donne : un thème unique (chocolat, café, salade, tartes, graines, bière, e-sport…) et une localisation dans une ville cosmopolite (Paris, Berlin, Londres...)"
 ---
 

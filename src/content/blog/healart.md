@@ -4,7 +4,9 @@ description: "Créer la direction artistique d'un service proposant des ateliers
 pubDate: '20 December 2024'
 heroImage: '/presentation_healart/affiche_v4.png'
 tags: ['branding', 'communication']
-client: 'Projet étudiant @2024'
+client: 'Projet étudiant'
+annee: "2024"
+duree: "3 mois"
 brief: "Création d'un projet, de son identité visuelle à sa communication et les outils numériques adéquats. Ce travail se divise en 3 étapes : description objective du projet, engagement créatif et synthèse de tous les éléments pour le livrable."
 ---
 

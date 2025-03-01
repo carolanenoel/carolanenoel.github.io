@@ -4,7 +4,9 @@ description: "Créer une expérience interactive où le joueur incarne un gendar
 pubDate: '17 May 2024'
 heroImage: '/presentation_disparition_musee/cover.png'
 tags: ['jeu', 'communication']
-client: "Centre d'Information et de Recrutement (CIR) de la Gendarmerie de Limoges @2024"
+client: "Centre d'Information et de Recrutement (CIR) de la Gendarmerie de Limoges"
+annee: "2024"
+duree: "3 semaines"
 brief: "Le but était de créer une expérience innovante pour aider le CIR à recruter les jeunes. Le choix du dispositif était libre, ma tutrice de stage avait une proposition mais elle m'a laissé la liberté de faire autre chose."
 ---
 

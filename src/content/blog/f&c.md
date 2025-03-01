@@ -4,7 +4,9 @@ description: "Créer le concept d'un mini-jeu de plateforme indépendant en lign
 pubDate: '5 April 2024'
 heroImage: '/presentation_fetc/cover.jpg'
 tags: ['jeu', 'uxui', 'communication']
-client: 'Projet étudiant @2024'
+client: 'Projet étudiant'
+annee: "2024"
+duree: "3 semaines"
 brief: "En tant que producteurs de contenus juniors, les étudiants, par équipe de 3 ou 4, doivent, pour le lancement d’un mini jeu indépendant (Indie Game), produire et héberger l’ensemble des contenus multimédias."
 ---
 

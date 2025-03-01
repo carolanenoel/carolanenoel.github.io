@@ -4,7 +4,9 @@ description: "Projet étudiant fictif par groupe de 4 devant créer une structur
 pubDate: '20 December 2024'
 heroImage: '/presentation_lh/cover.png'
 tags: ['communication']
-client: 'Projet étudiant @2024'
+client: 'Projet étudiant'
+annee: "2024"
+duree: "3 mois"
 brief: "L’objectif était de simplifier la distinction entre les réparations à la charge des locataires et celles prises en compte par Limoges habitat. Il fallait les rendre simples et facile à comprendre, ludiques, pour pouvoir toucher un large nombre de locataires malgré les différences sociales et ethniques. Les supports de communication n’étaient pas imposés, du moment qu’il y avait au moins des documents papiers."
 ---
 
