@@ -20,6 +20,7 @@ export default {
 			},
 			backgroundImage: {
 				'livreimg': "url('/src/assets/livreillu.png')",
+				'intro': "url('/src/assets/footer-illu.png')",
 			},
 			animation: {
 				fadeInUp: "fadeInUp 0.8s ease-out",

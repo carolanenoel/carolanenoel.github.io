@@ -2,6 +2,7 @@
 import Button from "../components/Button.astro";
 import Timeline from "../components/Timeline.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Classes from "../components/Classes.astro";
 ---
 
 <BaseLayout>
@@ -9,7 +10,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     À propos
   </h1>
 
-  <section class="flex flex-col lg:flex-row items-center gap-10 px-5 lg:px-16">
+  <section class="flex flex-col items-center gap-10 px-5 lg:px-16">
     <div class="flex flex-col items-center w-full gap-3.5">
       <img
         class="max-w-72"
@@ -26,13 +27,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <a href="https://www.linkedin.com/in/carolane-noel-062000265/"
               ><img src="/logo_linkedin.svg" alt="Logo LinkedIn" /></a>
           </li>
-          <li>
-            <a href="https://www.instagram.com/ti.ra_mizu/"
-              ><img
-                src="/logo_instagram.svg"
-                alt="Logo Instagram"
-              /></a>
-          </li>
         </ul>
         <Button
           Link="mailto:carolane.noel@outlook.com"
@@ -41,24 +35,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         />
       </div>
     </div>
-    <div class="flex flex-col items-start w-full gap-10">
-      <p class="lg:text-lg">
-        Étudiante en design graphique passionnée par la création. À travers mes
-        projets, j’explore diverses facettes du design, de l'identité visuelle
-        aux supports numériques, en cherchant toujours à allier créativité et
-        efficacité. Ce portfolio reflète mes expériences et mon évolution en
-        tant que future professionnelle. N’hésitez pas à me contacter pour
-        échanger sur vos idées et projets.
-      </p>
-        <Button
-          Link="moncv"
-          Placeholder="Mon Curriculum Vitae"
-          variant="secondary"
-        />
-      
-    </div>
+
+    <section>
+
+    </section>
+
+    <Classes />
+
+    
   </section>
-  <Timeline />
+  <section>
+    <h2 class="text-center">Historique</h2>
+    <Timeline />
+  </section>
 </BaseLayout>
 
 <style>

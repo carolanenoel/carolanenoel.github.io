@@ -1,0 +1,37 @@
+---
+const { ProjectIllu } = Astro.props
+const { Title } = Astro.props
+const { Description } = Astro.props
+
+---
+
+<section class=" flex flex-row lg:flex-row w-full justify-between items-center">
+      <article class="flex flex-col gap-5">
+        <h2>Choisissez votre classe</h2>
+        <ul class="grid grid-cols-3 grid-rows-2 gap-5">
+            <li class="icon"><a href=""><img src="/illustration-icon.svg" alt=""/></a></li>
+            <li class="icon"><a href=""><img src="/uiux-icon.svg" alt=""/></a></li>
+            <li class="icon"><a href=""><img src="/brand_icon.svg" alt=""/></a></li>
+            <li class="icon"><a href=""><img src="/dev-icon.svg" alt=""/></a></li>
+            <li class="icon"><a href=""><img src="/charadesign-icon.svg" alt=""/></a></li>
+            <li class="icon"><a href=""><img src="/audiovisuel-icon.svg" alt=""/></a></li>
+        </ul>
+      </article>
+      <div>
+          <img class="character" src="/illustration_2.svg" alt="">
+      </div>
+      <div>
+          
+      </div>
+    </section>
+
+<style>
+    .icon {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+
+    .character {
+        height: 20rem;
+    }
+</style>

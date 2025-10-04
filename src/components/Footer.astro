@@ -21,10 +21,10 @@ const today = new Date();
 				<p class="text-clrWhite md:text-3xl">On se contacte ?</p>
 				<div class="flex flex-col gap-2">
 					<a class="text-base text-clrWhite hover:underline" href="mailto:carolane.noel@outlook.com">carolane.noel@outlook.com</a>
-					<ul class="flex gap-8">
-						<li><a class="flex w-full px-1.5" href="https://www.behance.net/carolanenoel1"><img src="/logo_behance.svg" alt="Logo Behance"/></a></li>
-						<li><a class="w-full px-1.5" href="https://www.linkedin.com/in/carolane-noel-062000265/"><img src="/logo_linkedin.svg" alt="Logo LinkedIn"/></a></li>
-						<li><a class="w-full px-1.5" href="https://www.instagram.com/ti.ra_mizu/"><img src="/logo_instagram.svg" alt="Logo Instagram"></a></li>
+					<ul class="flex gap-3">
+						<li><a class="flex rs w-full px-1.5" href="https://www.behance.net/carolanenoel1"><img src="/logo_behance.svg" alt="Logo Behance"/></a></li>
+						<li><a class="w-full rs px-1.5" href="https://www.linkedin.com/in/carolane-noel-062000265/"><img src="/logo_linkedin.svg" alt="Logo LinkedIn"/></a></li>
+						
 					</ul>
 				</div>
 			</section>
@@ -32,13 +32,18 @@ const today = new Date();
 		</section>
 	</div>
 	
-	<section class="relative w-full">
-		<div class="h-screen w-full">
-			<img src="/footer-illu.png" class="w-full h-full object-cover" alt="Illustration footer">
+	<section class="w-full flex flex-row justify-between items-center px-5">
+		<div class="w-1/3 bottom-2 text-base">
+			&copy; {today.getFullYear()} - Moi
 		</div>
-		<div class="absolute w-full bottom-2 text-base text-center text-clrWhite">
-			&copy; {today.getFullYear()} Carolane. Tous droits réservés.
-		</div>
+		<div class="w-1/3 h-0.5 bg-black"></div>
+		<ul class="w-1/3 flex flex-row gap-3 items-center justify-center">
+			<li class="w-10"><a href="https://linktr.ee/cirelune"><img src="/logo_cirelune.png" alt=""></a></li>
+			<li class="w-10"><a href="https://tamanotchi.world/23261c"><img src="https://tamanotchi.world/i/23261" alt="It's tamaNOTchi! Click to feed!"></a></li>
+			<li class="w-10">
+				<div class="tenor-gif-embed" data-postid="11329483" data-share-method="host" data-aspect-ratio="0.859375" data-width="100%"><a href="https://tenor.com/view/link-video-game-pixel-art-gif-11329483">Link Video Game GIF</a>from <a href="https://tenor.com/search/link-gifs">Link GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+			</li>
+		</ul>
 	</section>
 	
 </footer>
@@ -59,7 +64,7 @@ const today = new Date();
 		
 	}
 
-	li {
+	.rs {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -68,7 +73,7 @@ const today = new Date();
 		background-color: var(--primary-neutral);
 		border-radius: 4px;
 	}
-	li:hover {
+	.rs:hover {
 		background-color: var(--primary-dark);
     }
 </style>

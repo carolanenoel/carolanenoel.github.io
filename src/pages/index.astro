@@ -15,15 +15,9 @@ const latestPosts = posts.slice(0, 3);
 
 <BaseLayout>
   <section
-    class="fixed z-0 flex flex-col w-full h-screen bg-livreimg bg-cover"
+    class="fixed z-0 flex flex-col w-full h-screen bg-intro bg-cover"
   >
     <section class=" flex flex-col w-full items-center gap-11 px-5 lg:px-16">
-      <div class="text-center">
-        <h1 class="font-cormorantInfant lg:text-5xl">
-          Du rêve à la réalisation
-        </h1>
-        <p class="text-lg lg:text-xl">Design graphique et illustrations</p>
-      </div>
       <div class="flex flex-col items-center gap-2.5">
         <img src="/logo-icon-primary.svg" alt="Logo" />
         <img src="/star-icon-red.svg" alt="Étoile" />
@@ -60,21 +54,9 @@ const latestPosts = posts.slice(0, 3);
       </div>
     </section>
 
-
-    <section
-      class="flex flex-col items-center w-full gap-5 lg:gap-7 px-5 lg:px-16"
-    >
-      <div class="flex flex-col gap-1 w-full">
-        <p class="md:text-lg">Que puis-je faire ?</p>
-        <h2 class="font-cormorantInfant md:text-5xl">Services</h2>
-      </div>
-      <SkillCardCarousel/>
-    </section>
-
     <section class="z-50 flex flex-col w-full items-center gap-5 lg:gap-7 px-5 lg:px-16">
       <div class="flex flex-col gap-1 w-full">
-        <p class="md:text-lg">Qu'ais-je déjà fais ?</p>
-        <h2 class="font-cormorantInfant md:text-5xl">Projets</h2>
+        <h2 class="font-cormorantInfant md:text-5xl">Derniers projets réalisés</h2>
       </div>
       <ul
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full justify-start gap-9 max-h-min"
@@ -94,5 +76,7 @@ const latestPosts = posts.slice(0, 3);
       </ul>
       <Button Link="/blog" Placeholder="Voir plus ┏ (゜ω゜)=👉" />
     </section>
+
+    
   </section>
 </BaseLayout>
