@@ -139,7 +139,7 @@
   </div>
 </div>
 
-<script is:client>
+<script>
   // Intersection Observer for timeline animation
   const observerOptions = {
     threshold: 0.1,
@@ -149,8 +149,9 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        const element = entry.target as HTMLElement;
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
         // Unobserve after animation to prevent re-triggering
         observer.unobserve(entry.target);
       }
@@ -162,7 +163,8 @@
     const timelineCards = document.querySelectorAll('.timeline-card');
     timelineCards.forEach((card, index) => {
       // Add staggered delay for each card
-      card.style.transitionDelay = `${index * 100}ms`;
+      const element = card as HTMLElement;
+      element.style.transitionDelay = `${index * 100}ms`;
       observer.observe(card);
     });
   });
