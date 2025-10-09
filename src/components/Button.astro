@@ -15,7 +15,7 @@ const variantStyles = {
     <span class="relative">{Placeholder}</span>
 </a> -->
 
-<a class={`${baseStyles} ${variantStyles[variant]}`}>
+<a href={Link} class={`${baseStyles} ${variantStyles[variant]}`}>
     <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primaryDark group-hover:h-full"></span>
     <span class="relative">{Placeholder}</span>
     <slot />

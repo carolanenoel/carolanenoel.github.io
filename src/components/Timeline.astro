@@ -18,7 +18,7 @@
       >
       </div>
       <div
-        class="bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">
           Alternance communication numérique
@@ -41,7 +41,7 @@
       </div>
 
       <div
-        class="bg-white rounded-lg p-4 max-w-md mr-6 md:mr-0 md:ml-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md mr-6 md:mr-0 md:ml-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">
           Master Création numérique - Design d'expérience et d'interface
@@ -56,7 +56,7 @@
       >
       </div>
       <div
-        class="bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">
           Alternance webmaster
@@ -77,7 +77,7 @@
       </div>
 
       <div
-        class="bg-white rounded-lg p-4 max-w-md mr-6 md:mr-0 md:ml-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md mr-6 md:mr-0 md:ml-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">
           Stage community manager et créateur de visuels
@@ -96,7 +96,7 @@
       >
       </div>
       <div
-        class="bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">
           BUT Métiers du Multimédia et de l'Internet
@@ -114,7 +114,7 @@
       >
       </div>
       <div
-        class="bg-white rounded-lg p-4 max-w-md mr-6 md:mr-0 md:ml-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md mr-6 md:mr-0 md:ml-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">
           L1 Histoire de l'Art
@@ -130,7 +130,7 @@
       >
       </div>
       <div
-        class="bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 animate-fadeInUp shadow-md shadow-(color:rgba(0, 0, 0, 0.3))"
+        class="timeline-card bg-white rounded-lg p-4 max-w-md ml-6 md:ml-0 md:mr-6 shadow-md shadow-(color:rgba(0, 0, 0, 0.3)) opacity-0 transform translate-y-8 transition-all duration-700 ease-out"
       >
         <h3 class="text-xl font-bold text-primaryNeutral">Bac ES</h3>
         <p class="text-gray-600">2020</p>
@@ -139,6 +139,31 @@
   </div>
 </div>
 
-<script>
+<script is:client>
+  // Intersection Observer for timeline animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        // Unobserve after animation to prevent re-triggering
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all timeline cards when component loads
+  document.addEventListener('DOMContentLoaded', () => {
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    timelineCards.forEach((card, index) => {
+      // Add staggered delay for each card
+      card.style.transitionDelay = `${index * 100}ms`;
+      observer.observe(card);
+    });
+  });
 </script>

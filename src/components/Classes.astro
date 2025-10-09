@@ -1,37 +1,268 @@
 ---
-const { ProjectIllu } = Astro.props
-const { Title } = Astro.props
-const { Description } = Astro.props
+const classes = [
+  {
+    id: 'illustration',
+    img: '/illustration.svg',
+    buttonImg: '/illustration-icon.svg',
+    description: '<strong>Rôle :</strong> Créateur d\'univers visuels<br><strong>Atouts :</strong> Imagination et précision<br><strong>Spécialité :</strong> Dessiner des mondes, donner vie aux idées<br><strong>Style :</strong> Solo ou en équipe, l\'illustrateur matérialise l\'imaginaire par la couleur, la forme et l\'émotion',
+    stats: [
+      { icon: '/logo_illustrator.svg', label: 'Illustrator' },
+      { icon: '/logo_krita.svg', label: 'Krita'},
+      { icon: '/logo_clip_studio_paint.svg', label: 'Clip Studio' }
+    ]
+  },
+  {
+    id: 'uxui',
+    img: '/ux-ui.svg',
+    buttonImg: '/uiux-icon.svg',
+    description: '<strong>Rôle :</strong> Architecte de l\'expérience<br><strong>Atouts :</strong> Empathie et logique<br><strong>Spécialité :</strong> Concevoir des interfaces intuitives et agréables<br><strong>Style :</strong> Guide les utilisateurs à travers des parcours fluides et cohérents',
+    stats: [
+      { icon: '/logo_figma.svg', label: 'Figma' },
+    ]
+  },
+  {
+    id: 'brand',
+    img: '/brand.svg',
+    buttonImg: '/brand_icon.svg',
+    description: '<strong>Rôle :</strong> Stratège de l\'identité<br><strong>Atouts :</strong> Vision et cohérence<br><strong>Spécialité :</strong> Créer des univers de marque forts et reconnaissables<br><strong>Style :</strong> Façonne la personnalité d\'une marque pour la rendre inoubliable',
+    stats: [
+      { icon: '/logo_illustrator.svg', label: 'Illustrator' },
+      { icon: '/logo_indesign.svg', label: 'InDesign' },
+      { icon: '/logo_photoshop.svg', label: 'Photoshop' },
+      { icon: '/logo_figma.svg', label: 'Figma' }
+    ]
+  },
+  {
+    id: 'dev',
+    img: '/dev.svg',
+    buttonImg: '/dev-icon.svg',
+    description: '<strong>Rôle :</strong> Ingénieur du code et de la création<br><strong>Atouts :</strong> Rigueur et inventivité<br><strong>Spécialité :</strong> Construire des sites, applis et systèmes fonctionnels<br><strong>Style :</strong> Transforme les idées en outils concrets et performants',
+    stats: [
+      { icon: '/logo_react.svg', label: 'React' },
+      { icon: '/logo_js.svg', label: 'JavaScript' },
+      { icon: '/logo_html.svg', label: 'HTML/CSS' },
+      { icon: '/logo_tailwind.svg', label: 'Tailwind' }
+    ]
+  },
+  {
+    id: 'charadesign',
+    img: '/charadesign.svg',
+    buttonImg: '/charadesign-icon.svg',
+    description: '<strong>Rôle :</strong> Concepteur d\'âmes visuelles<br><strong>Atouts :</strong> Créativité et sens du détail<br><strong>Spécialité :</strong> Imaginer et styliser des personnages uniques<br><strong>Style :</strong> Donne vie aux héros, monstres et avatars qui habitent les mondes visuels',
+    stats: [
+      { icon: '/logo_clip_studio_paint.svg', label: 'Clip Studio' },
+      { icon: '/logo_krita.svg', label: 'Krita' },
+      { icon: '/logo_ibispaint.svg', label: 'IbisPaint' }
+    ]
+  },
+  {
+    id: 'audiovisuel',
+    img: '/audiovisuel.svg',
+    buttonImg: '/audiovisuel-icon.svg',
+    description: '<strong>Rôle :</strong> Maître du rythme et de la narration visuelle<br><strong>Atouts :</strong> Créativité et technique<br><strong>Spécialité :</strong> Réalisation, montage, motion design<br><strong>Style :</strong> Crée des histoires percutantes où chaque image compte',
+    stats: [
+      { icon: '/logo_premiere_pro.svg', label: 'Premiere Pro' },
+      { icon: '/logo_blender.svg', label: 'Blender' },
+      { icon: '/logo_after.svg', label: 'After Effects' },
+      { icon: '/logo_photoshop.svg', label: 'Photoshop' }
+    ]
+  }
+];
 
 ---
 
-<section class=" flex flex-row lg:flex-row w-full justify-between items-center">
-      <article class="flex flex-col gap-5">
-        <h2>Choisissez votre classe</h2>
-        <ul class="grid grid-cols-3 grid-rows-2 gap-5">
-            <li class="icon"><a href=""><img src="/illustration-icon.svg" alt=""/></a></li>
-            <li class="icon"><a href=""><img src="/uiux-icon.svg" alt=""/></a></li>
-            <li class="icon"><a href=""><img src="/brand_icon.svg" alt=""/></a></li>
-            <li class="icon"><a href=""><img src="/dev-icon.svg" alt=""/></a></li>
-            <li class="icon"><a href=""><img src="/charadesign-icon.svg" alt=""/></a></li>
-            <li class="icon"><a href=""><img src="/audiovisuel-icon.svg" alt=""/></a></li>
-        </ul>
-      </article>
-      <div>
-          <img class="character" src="/illustration_2.svg" alt="">
-      </div>
-      <div>
-          
-      </div>
-    </section>
-
 <style>
-    .icon {
-        width: 6.25rem;
-        height: 6.25rem;
+    .selector-container {
+      align-items: center;
+    }
+  
+    .class-buttons {
+      display: grid;
+      gap: 3rem;
+    }
+  
+    .class-buttons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.class-buttons button.active {
+  
+}
+
+.button-image {
+  width: 8rem;
+  height: auto;
+  object-fit: contain;
+}
+
+  
+    .character-image img {
+      height: 100%;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+  
+    .class-description {
+      text-align: left;
+      font-size: 1.1rem;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
 
-    .character {
-        height: 20rem;
+    .stats-table {
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
-</style>
+
+    .stat-item {
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+  </style>
+
+
+  
+  <section class="flex flex-col items-center gap-5">
+    <h2 class="font-cormorantInfant text-4xl">Choisissez votre classe</h2>
+  <div class="selector-container grid grid-cols-3 h-full" id="classe-selector">
+    <ul class="class-buttons grid grid-cols-3 gap-2">
+      {classes.map((classe, index) => (
+        <li class="hover:scale-125 transition-transform duration-300 ease-in-out">
+            <button
+            class={index === 0 ? 'active' : ''}
+            data-id={classe.id}
+            data-img={classe.img}
+            >
+            <img src={classe.buttonImg} class="button-image" />
+            <span class="hidden desc-html" set:html={classe.description}></span>
+            </button>
+        </li>
+      ))}
+    </ul>
+  
+    <div class="character-image flex justify-center items-center">
+      <img  id="class-img" src={classes[0].img} />
+    </div>
+  
+    <div class="class-description h-full">
+      <p class="p-4 bg-primaryNeutral text-clrWhite rounded-lg w-50" id="class-desc" set:html={classes[0].description}></p>
+      
+      <!-- Stats Table -->
+      <div class="stats-table mt-6">
+        <div class="grid grid-cols-2 gap-4" id="stats-container">
+          {classes[0].stats.map((stat) => (
+            <div class="stat-item bg-clrWhite rounded-lg p-3 flex items-center gap-3 shadow-sm">
+              <img src={stat.icon} alt={stat.label} class="w-8 h-8 object-contain" />
+              <div class="flex-1">
+                <div class="font-semibold text-sm">{stat.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <script>
+    const selector = document.getElementById('classe-selector');
+    if (selector) {
+      const buttons = selector.querySelectorAll('button');
+      const img = selector.querySelector<HTMLImageElement>('#class-img');
+      const desc = selector.querySelector<HTMLParagraphElement>('#class-desc');
+      const statsContainer = selector.querySelector<HTMLDivElement>('#stats-container');
+
+      // Class data from the component
+      const classesData = [
+        {
+          id: 'illustration',
+          stats: [
+            { icon: '/logo_illustrator.svg', label: 'Illustrator' },
+            { icon: '/logo_krita.svg', label: 'Krita' },
+            { icon: '/logo_clip_studio_paint.svg', label: 'Clip Studio' }
+          ]
+        },
+        {
+          id: 'uxui',
+          stats: [
+            { icon: '/logo_figma.svg', label: 'Figma' },
+          ]
+        },
+        {
+          id: 'brand',
+          stats: [
+            { icon: '/logo_illustrator.svg', label: 'Illustrator' },
+            { icon: '/logo_indesign.svg', label: 'InDesign' },
+            { icon: '/logo_photoshop.svg', label: 'Photoshop' },
+            { icon: '/logo_figma.svg', label: 'Figma' }
+          ]
+        },
+        {
+          id: 'dev',
+          stats: [
+            { icon: '/logo_react.svg', label: 'React' },
+            { icon: '/logo_js.svg', label: 'JavaScript' },
+            { icon: '/logo_html.svg', label: 'HTML/CSS' },
+            { icon: '/logo_tailwind.svg', label: 'Tailwind' }
+          ]
+        },
+        {
+          id: 'charadesign',
+          stats: [
+            { icon: '/logo_clip_studio_paint.svg', label: 'Clip Studio' },
+            { icon: '/logo_krita.svg', label: 'Krita' },
+            { icon: '/logo_ibispaint.svg', label: 'IbisPaint' }
+          ]
+        },
+        {
+          id: 'audiovisuel',
+          stats: [
+            { icon: '/logo_premiere_pro.svg', label: 'Premiere Pro' },
+            { icon: '/logo_blender.svg', label: 'Blender' },
+            { icon: '/logo_after.svg', label: 'After Effects' },
+            { icon: '/logo_photoshop.svg', label: 'Photoshop' }
+          ]
+        }
+      ];
+
+      function updateStats(classId: string) {
+        if (!statsContainer) return;
+        
+        const classData = classesData.find(c => c.id === classId);
+        if (!classData) return;
+
+        statsContainer.innerHTML = classData.stats.map(stat => `
+          <div class="stat-item bg-clrWhite rounded-lg p-3 flex items-center gap-3 shadow-sm">
+            <img src="${stat.icon}" alt="${stat.label}" class="w-8 h-8 object-contain" />
+            <div class="flex-1">
+              <div class="font-semibold text-sm">${stat.label}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          buttons.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const newImg = btn.getAttribute('data-img');
+          const newDesc = (btn.querySelector('.desc-html') as HTMLElement | null)?.innerHTML ?? '';
+          const classId = btn.getAttribute('data-id');
+
+          if (img && newImg) {
+            img.src = newImg;
+            img.alt = btn.textContent || '';
+          }
+          if (desc) {
+            desc.innerHTML = newDesc;
+          }
+          if (classId) {
+            updateStats(classId);
+          }
+        });
+      });
+    }
+  </script>
